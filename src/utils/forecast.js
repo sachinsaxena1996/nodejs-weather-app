@@ -8,8 +8,8 @@ const forecast = (latitude, longitude, callback) => {
         }
         else if (response.body.error)
             callback('Please specify a valid location identifier using the query parameter.', undefined)
-        else {        
-            callback(undefined, response.body.current.weather_descriptions[0] + '. It is presently '+ response.body.current.temperature + ' degree celcius the chances of rain is ' + response.body.current.precip + ' %')
+        else {            
+            callback(undefined, response.body.current.weather_descriptions[0] + '.\n It is presently '+ response.body.current.temperature + ' degree celcius the chances of rain is ' + response.body.current.precip + ' %. Humidity is ' + response.body.current.humidity)
         }
     })
 }
