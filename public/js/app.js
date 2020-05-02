@@ -6,7 +6,7 @@ weatherForm.addEventListener('submit', (e) => {
     const messageOne = document.querySelector('#message-1')
     const messageTwo = document.querySelector('#message-2')
 
-    const url = 'http://localhost:3000/weather?address=' + location
+    const url = '/weather?address=' + location
 
     messageOne.textContent = 'loading the weather'
 
